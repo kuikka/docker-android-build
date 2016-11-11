@@ -34,7 +34,7 @@ RUN tar xf android-sdk_r24.4.1-linux.tgz
 RUN rm -f android-sdk_r24.4.1-linux.tgz
 
 ENV ANDROID_HOME=$PWD/android-sdk-linux
-RUN echo "y"|$ANDROID_HOME/tools/android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.0,android-23
+RUN echo "y"|$ANDROID_HOME/tools/android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.0,android-23,android-18,build-tools-24.0.1
 RUN mkdir -p $ANDROID_HOME/licenses
 RUN echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > $ANDROID_HOME/licenses/android-sdk-license
 
